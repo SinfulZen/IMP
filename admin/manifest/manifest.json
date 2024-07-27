@@ -1,0 +1,21 @@
+{
+  "name": "Immortal Modding Paradise (Rewrite)",
+  "short_name": "Website",
+  "description": "An intensive collection of PlayStation™3 content. We also have various unique tools for media enhancement and social platforms!",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#141414",
+  "theme_color": "#CC5DE8",
+  "icons": [
+    {
+      "src": "#",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "#",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
