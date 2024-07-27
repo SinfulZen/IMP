@@ -92,14 +92,14 @@ All credits goes to the following People or groups for contributing to the proje
 - RU Modding Team
 
 + Any other Contributers not listed but have helped behind the scenes. We thank You sincerely, You know who You are...
-+ <a href="https://discord.gg/vbGdtfNQXT" style="text-decoration: none;">
+<a href="https://discord.gg/vbGdtfNQXT" style="text-decoration: none;">
   <img src="https://img.shields.io/badge/EMC%20Discord%20Server-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="EMC">
 </a>
 <a href="https://discord.gg/pYYaYpArv8" style="text-decoration: none;">
   <img src="https://img.shields.io/badge/EMC%20Discord%20Server-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Zen Empire">
 </a>
 <a href="https://www.youtube.com/@FlaMinG_IMmortALbackup" style="text-decoration: none;">
-  <img src="https://img.shields.io/badge/Subscribe%20to%20Our%20YouTube%20Channel-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Flaming Immortal">
+  <img src="https://img.shields.io/badge/Flaming%20Immortal-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Flaming Immortal">
 </a>
 
 ### Terms Of Service
