@@ -93,7 +93,7 @@ All credits goes to the following People or groups for contributing to the proje
 
 + Any other Contributers not listed but have helped behind the scenes. We thank You sincerely, You know who You are...
 <a href="https://discord.gg/vbGdtfNQXT" style="text-decoration: none;">
-  <img src="https://img.shields.io/badge/EMC%20Discord%20Server-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="EMC">
+  <img src="https://img.shields.io/badge/EMC-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="EMC">
 </a>
 <a href="https://discord.gg/pYYaYpArv8" style="text-decoration: none;">
   <img src="https://img.shields.io/badge/Zen%20Empire%20-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Zen Empire">
