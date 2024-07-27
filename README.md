@@ -3,8 +3,12 @@
 A rewrite of the already existing [Immortal Modding Paradise](https://github.com/SinfulZen/IMP) repo.
 
 <a href="https://discord.gg/vbGdtfNQXT" style="text-decoration: none;">
-  <img src="https://img.shields.io/badge/EMC%20Discord%20Server-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="EMC Discord Server">
+  <img src="https://img.shields.io/badge/EMC%20Discord%20Server-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="EMC">
 </a>
+<a href="https://discord.gg/pYYaYpArv8" style="text-decoration: none;">
+  <img src="https://img.shields.io/badge/EMC%20Discord%20Server-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Zen Empire">
+</a>
+
 
 ### About Us
 IMP (or Immortal Modding Paradise) is a collection of content for the PlayStation™3. We aim to put everything all in one place, making it easier for You to find and download / use. As this project is non funded, We're hosting it using GitHub Pages. This makes it free and easy to access for everything. The project was founded by Flaming Immortal and is being worked on by [Zen Developments](https://github.com/SinfulZen). [Flaming Immortal](https://www.youtube.com/@FlaMinG_IMmortALbackup) is a PS3 Modder and YouTuber. He showcases mods and His own projects (such as mod loaders). Zen (the Founder and CEO of Zen Developments) is a Developer that runs a small Team. He works on numerous projects regarding:
