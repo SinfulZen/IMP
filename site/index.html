@@ -19,12 +19,12 @@
     <meta property="og:description" content="An intensive collection of PlayStation™3 content. We also have various unique tools for media enhancement and social platforms!">
     <meta property="og:image" content="https://sinfulzen.github.io/IMP-Rewrite/assets/images/branding/banner.png">
 
-    <title>IMP • Under Construction</title>
+    <title>IMP • Login</title>
 </head>
 </html>
 
 <!-- MAIN -->
-<html>
+<html lang="en">
 <head>
 
     <style>
@@ -36,67 +36,180 @@
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-            color: #fff;
         }
-        .centered-body {
-            background-color: #1f1f1f;
-            border: 2px solid #D3A1E1;
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .login-body {
+            background-color: #1e1e1e;
+            border: 2px solid #d5a0d5;
             border-radius: 15px;
             padding: 20px;
             text-align: center;
             width: 300px;
         }
+
         .logo {
-            width: 45px;
-            height: auto;
-            position: relative;
-            top: -42px;
-            right: 0px;
-            bottom: 0px;
-            left: 0px;
+            max-width: 45px;
             margin-bottom: 20px;
-}
         }
-        .header {
-            font-size: 24px;
-            margin: 0;
-        }
-        .subheader {
-            font-size: 14px;
-            margin: 5px 0 20px 0;
-        }
-        .button {
-            background-color: #D3A1E1;
-            border: none;
-            border-radius: 15px;
-            color: #141414;
-            padding: 10px 20px;
-            margin: 5px;
-            font-size: 16px;
-            cursor: pointer;
+
+        .input-group {
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-decoration: none;
+            border: 2px solid #d5a0d5;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            background-color: #1e1e1e;
         }
-        .button img {
-            margin-right: 8px;
+
+        .input-icon {
+            width: 20px;
+            margin: 5px;
+        }
+
+        .input-field {
+            border: none;
+            background: transparent;
+            color: #fff;
+            padding: 10px;
+            width: calc(100% - 40px);
+            border-radius: 15px;
+            outline: none;
+        }
+
+        .input-group,
+        .login-button,
+        .guest-button {
+            width: calc(100% - 20px);
+            margin: 10px auto;
+        }
+
+        .login-button, .guest-button {
+            background-color: #d5a0d5;
+            border: none;
+            border-radius: 15px;
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .footer {
+            margin-top: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+        }
+
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .error-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #2a2a2a;
+            border: 2px solid #d5a0d5;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .error-popup-body {
+            background-color: #2a2a2a;
+            border: 2px solid #d5a0d5;
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        .error-popup button {
+            background-color: #d5a0d5;
+            border: none;
+            border-radius: 15px;
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <div class="centered-body">
-        <img src="assets/images/icons/construction.webp" alt="Logo" class="logo">
-        <h3 class="header">Under Construction</h3>
-        <p class="subheader">This section of the site is unfinished, please come back soon!</p>
-        <a href="https://discord.gg/vbGdtfNQXT" class="button">
-            <img src="assets/images/icons/construction-discord.png" alt="Discord" width="20" height="20">
-            Discord
-        </a>
-        <a href="https://github.com/sinfulzen/IMP-Rewrite" class="button">
-            <img src="assets/images/icons/construction-github.png" alt="GitHub" width="20" height="20">
-            GitHub
-        </a>
+    <div class="container">
+        <div class="login-body">
+            <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/branding/logo.png" alt="#" class="logo">
+
+            <div class="input-group">
+                <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/account.png" alt="#" class="input-icon">
+                <input type="text" id="username" placeholder="Username" class="input-field">
+            </div>
+            <div class="input-group">
+                <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/padlock.png" alt="#" class="input-icon">
+                <input type="password" id="password" placeholder="Password" class="input-field">
+            </div>
+
+            <button class="login-button" onclick="login()">Login</button>
+            <button class="guest-button" onclick="redirectGuest()">Guest</button>
+
+            <div class="footer">
+            <p style="color: white;">Sign-up or continue with</p>
+                <div class="social-icons">
+                    <a href="https://myaccount.google.com" target="_blank"><img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/google.png" alt="#"></a>
+                    <a href="https://microsoft.com" target="_blank"><img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/microsoft.png" alt="#"></a>
+                    <a href="https://www.instagram.com" target="_blank"><img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/instagram.png" alt="#"></a>
+                    <a href="https://sinfulzen.github.io/IMP-Rewrite/site/login/signup/index.html" target="_blank"><img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/signup.png" alt="#"></a>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <div id="error-popup" class="error-popup">
+        <div class="error-popup-body">
+            <p style="color: white;">Incorrect credentials, please try again.</p>
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+    <script>
+
+        const correctUsername = 'ImmortalModding';
+        const correctPassword = 'Paradise';
+
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === correctUsername && password === correctPassword) {
+                window.location.href = 'https://sinfulzen.github.io/IMP-Rewrite/site/index.html';
+            } else {
+                document.getElementById('error-popup').style.display = 'block';
+            }
+        }
+
+        function closePopup() {
+            document.getElementById('error-popup').style.display = 'none';
+        }
+
+        function redirectGuest() {
+            window.location.href = 'https://sinfulzen.github.io/IMP-Rewrite/site/index.html';
+        }
+    </script>
 </body>
 </html>
