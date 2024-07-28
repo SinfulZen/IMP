@@ -1,102 +1,236 @@
 <!DOCTYPE html>
 
-<!-- META, OG & SEO TAGS -->
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="An intensive collection of PlayStation™3 content. We also have various unique tools for media enhancement and social platforms!">
-    <meta name="keywords" content="Flaming, Immortal, Zen, Dev, Development, Modding, Paradise, IMP, Rewrite, Google, GitHub, Web, PlayStation™3, PlayStation, PS3, Gaming, Hack, Hacks, Hacker, Hacking, Mod, Mods, Modding, Modder, Homebrew, Terms, TOS, Jailbreak, Exploit, Exploits, Hybrid, Custom, HFW, CFW">
-    <meta name="application-name" content="https://sinfulzen.github.io/IMP-Rewrite">
-    <link rel="icon" href="assets/images/branding/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="assets/images/branding/favicon.ico" type="image/x-icon">
-    <link rel="manifest" href="admin/manifest/manifest.json">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sinfulzen.github.io/IMP-Rewrite">
-    <meta property="og:title" content="Immortal Modding Paradise">
-    <meta property="og:description" content="An intensive collection of PlayStation™3 content. We also have various unique tools for media enhancement and social platforms!">
-    <meta property="og:image" content="https://sinfulzen.github.io/IMP-Rewrite/assets/images/branding/banner.png">
-
-    <title>IMP • Under Construction</title>
-</head>
-</html>
-
-<!-- MAIN -->
-<html>
-<head>
-
+    <title>IMP • Assistant Experiment</title>
     <style>
         body {
             background-color: #141414;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-            color: #fff;
+            height: 100vh;
+            color: white;
+            align-items: center;
+            justify-content: center;
         }
-        .centered-body {
-            background-color: #1f1f1f;
-            border: 2px solid #D3A1E1;
-            border-radius: 15px;
+        .side-panel {
+            background-color: #1c1c1c;
+            border: 2px solid purple;
+            border-radius: 20px;
+            width: 15%;
+            display: flex;
+            flex-direction: column;
             padding: 20px;
             text-align: center;
-            width: 300px;
+            height: 90%;
         }
-        .logo {
-            width: 45px;
-            height: auto;
-            position: relative;
-            top: -42px;
-            right: 0px;
-            bottom: 0px;
-            left: 0px;
-            margin-bottom: 20px;
-}
-        }
-        .header {
-            font-size: 24px;
-            margin: 0;
-        }
-        .subheader {
-            font-size: 14px;
-            margin: 5px 0 20px 0;
-        }
-        .button {
-            background-color: #D3A1E1;
-            border: none;
+        .top-button, .bottom-button {
+            background-color: #282828;
+            border: 2px solid purple;
             border-radius: 15px;
-            color: #141414;
-            padding: 10px 20px;
-            margin: 5px;
-            font-size: 16px;
-            cursor: pointer;
+            padding: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-decoration: none;
+            cursor: pointer;
+            color: white;
+            font-size: 16px;
+            width: 60%;
+            margin: 0 auto;
         }
-        .button img {
-            margin-right: 8px;
+        .new-chat-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .new-chat-section .new-chat-text {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .new-chat-section .new-chat-text:hover {
+            background-color: #282828;
+            border-radius: 15px;
+            padding: 5px;
+        }
+        .new-chat-section .new-chat-text img {
+            margin-left: 5px;
+        }
+        .dropdown-menu {
+            display: none;
+            background-color: #1c1c1c;
+            border-radius: 15px;
+            padding: 10px;
+            position: absolute;
+            margin-top: 10px;
+            text-align: left;
+            width: 150px;
+            border: 2px solid purple;
+        }
+        .dropdown-menu .dropdown-item {
+            display: flex;
+            align-items: center;
+            padding: 5px 0;
+        }
+        .dropdown-menu .dropdown-item img {
+            margin-right: 10px;
+        }
+        .chat-section {
+            flex-grow: 1;
+            background-color: #1c1c1c;
+            border: 2px solid purple;
+            border-radius: 20px;
+            margin-left: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            height: 90%;
+        }
+        .input-box-container {
+            border: 2px lightpurple;
+            border-radius: 20px;
+            padding: 10px;
+            background-color: #1c1c1c;
+        }
+        .input-box {
+            background-color: #1c1c1c;
+            border: 2px solid purple;
+            border-radius: 15px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            margin-left: -10px;
+            margin-bottom: -8px;
+        }
+        .input-box input {
+            background: none;
+            border: none;
+            color: white;
+            text-align: center;
+            width: 100%;
+        }
+        .input-box input:focus {
+            outline: none;
+        }
+        .input-box img {
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <div class="centered-body">
-        <img src="assets/images/icons/construction.webp" alt="Logo" class="logo">
-        <h3 class="header">Under Construction</h3>
-        <p class="subheader">This section of the site is unfinished, please come back soon!</p>
-        <a href="https://discord.gg/vbGdtfNQXT" class="button">
-            <img src="assets/images/icons/construction-discord.png" alt="Discord" width="20" height="20">
-            Discord
-        </a>
-        <a href="https://github.com/sinfulzen/IMP-Rewrite" class="button">
-            <img src="assets/images/icons/construction-github.png" alt="GitHub" width="20" height="20">
-            GitHub
-        </a>
+    <div class="side-panel">
+        <div class="top-button">
+            <img src="assets/new.png" alt="#" width="20" height="20">
+             New
+        </div>
+        <div class="new-chat-section">
+            <div class="new-chat-text" onclick="toggleDropdown()">
+                New Chat
+                <img src="assets/more.png" alt="#" width="20" height="20">
+            </div>
+            <div class="dropdown-menu" id="dropdownMenu">
+                <div class="dropdown-item">
+                    <img src="assets/rename.png" alt="#" width="20" height="20">
+                    Rename
+                </div>
+                <div class="dropdown-item">
+                    <img src="assets/archive.png" alt="#" width="20" height="20">
+                    Archive
+                </div>
+                <div class="dropdown-item">
+                    <img src="assets/delete.png" alt="#" width="20" height="20">
+                    Delete
+                </div>
+            </div>
+        </div>
+        
+          <br>
+           <br>
+            <br>
+             <br>
+            <br>
+           <br>
+          <br>
+           <br>
+            <br>
+             <br>
+            <br>
+           <br>
+          <br>
+           <br>
+            <br>
+             <br>
+            <br>
+           <br>
+          <br>
+           <br>
+            <br>
+             <br>
+            <br>
+           <br>
+
+        <div class="bottom-button">
+            <img src="assets/premium.png" alt="#" width="20" height="20">
+             Premium
+        </div>
     </div>
+    <div class="chat-section">
+        <div class="input-box-container">
+            <div class="input-box">
+                <img src="assets/upload.png" alt="#" width="20" height="20" onclick="openFileExplorer()">
+                <input type="text" placeholder="Ask Me a question..." id="question-input">
+                <img src="assets/send.png" alt="#" width="20" height="20" onclick="sendMessage()">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDropdown() {
+            const dropdownMenu = document.getElementById('dropdownMenu');
+            if (dropdownMenu.style.display === 'none' || dropdownMenu.style.display === '') {
+                dropdownMenu.style.display = 'block';
+            } else {
+                dropdownMenu.style.display = 'none';
+            }
+        }
+
+        function openFileExplorer() {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.style.display = 'none';
+            document.body.appendChild(input);
+            input.click();
+            input.onchange = () => {
+                alert('File Selected: ' + input.files[0].name);
+                document.body.removeChild(input);
+            };
+        }
+
+        function sendMessage() {
+            const inputBox = document.getElementById('question-input');
+            const message = inputBox.value;
+            if (message.trim()) {
+                alert('Message Sent: ' + message);
+                inputBox.value = '';
+            } else {
+                alert('Please enter a message before sending');
+            }
+        }
+
+        window.onclick = function(event) {
+            const dropdownMenu = document.getElementById('dropdownMenu');
+            if (!event.target.matches('.new-chat-text') && !event.target.closest('.new-chat-section')) {
+                dropdownMenu.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
