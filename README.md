@@ -106,7 +106,11 @@ All credits goes to the following People or groups for contributing to the proje
 </a>
 
 ### Terms Of Service
-Any content downloaded from Our site is to be used responsibly. We are not responsible for anything You do and any consequences that come from abusing the content We provide. [This section will be updated soon](https://github.com/SinfulZen/IMP-Rewrite).
+1. Any content on Our site is to be used resposibly.
+2. We are not responsible for what You do or any consequences that You encounter.
+3. It's not Our fault if Your PSN account gets suspended or banned.
+4. If requested by law enforcement to give over info then We have to (if it's important enough).
+5. If Anyone is abusing Our site or its features and content, report it.
 
 ### Disclaimer
-This repo may feature several licenses to ensure that all aspects of protection are covered. [This section will be updated soon](https://github.com/SinfulZen/IMP-Rewrite).
+This repo may feature several licenses to ensure that all aspects of protection are covered. To avoid any legal issues or implications, if You're not happy with Your content being on Our site, please get in contact and inform Us. We can discuss what to do next and come to a conclusion peacefully.
