@@ -24,12 +24,9 @@
 </html>
 
 <!-- MAIN -->
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+
     <style>
         body {
             background-color: #141414;
@@ -101,6 +98,7 @@
             color: #fff;
             padding: 10px;
             cursor: pointer;
+            font-size: 16px;
         }
 
         .footer {
@@ -191,26 +189,24 @@
     </div>
 
     <script>
-        const correctUsername = 'ImmortalModding';
-        const correctPassword = 'Paradise';
 
         function redirectToHome() {
-            window.location.href = 'https://sinfulzen.github.io/IMP-Rewrite/home/index.html';
-        }
-
-        function closePopup() {
-            document.getElementById('error-popup').style.display = 'none';
+            window.location.replace('https://sinfulzen.github.io/IMP-Rewrite/site/home/index.html');
         }
 
         function login() {
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
 
-            if (username === correctUsername && password === correctPassword) {
+            if (username === 'ImmortalModding' && password === 'Paradise') {
                 redirectToHome();
             } else {
                 document.getElementById('error-popup').style.display = 'block';
             }
+        }
+
+        function closePopup() {
+            document.getElementById('error-popup').style.display = 'none';
         }
     </script>
 </body>
