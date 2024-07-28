@@ -24,9 +24,12 @@
 </html>
 
 <!-- MAIN -->
+<!DOCTYPE html>
 <html lang="en">
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
     <style>
         body {
             background-color: #141414;
@@ -154,27 +157,27 @@
 <body>
     <div class="container">
         <div class="login-body">
-            <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/branding/logo.png" alt="#" class="logo">
+            <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/branding/logo.png" alt="Logo" class="logo">
 
             <div class="input-group">
-                <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/account.png" alt="#" class="input-icon">
+                <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/account.png" alt="Account Icon" class="input-icon">
                 <input type="text" id="username" placeholder="Username" class="input-field">
             </div>
             <div class="input-group">
-                <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/padlock.png" alt="#" class="input-icon">
+                <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/padlock.png" alt="Padlock Icon" class="input-icon">
                 <input type="password" id="password" placeholder="Password" class="input-field">
             </div>
 
-            <button class="login-button" onclick="login()">Login</button>
-            <button class="guest-button" onclick="redirectGuest()">Guest</button>
+            <button class="login-button" onclick="redirectToHome()">Login</button>
+            <button class="guest-button" onclick="redirectToHome()">Guest</button>
 
             <div class="footer">
-            <p style="color: white;">Sign-up or continue with</p>
+                <p style="color: white;">Sign-up or continue with</p>
                 <div class="social-icons">
-                    <a href="https://myaccount.google.com" target="_blank"><img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/google.png" alt="#"></a>
-                    <a href="https://microsoft.com" target="_blank"><img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/microsoft.png" alt="#"></a>
-                    <a href="https://www.instagram.com" target="_blank"><img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/instagram.png" alt="#"></a>
-                    <a href="https://sinfulzen.github.io/IMP-Rewrite/site/login/signup/index.html" target="_blank"><img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/signup.png" alt="#"></a>
+                    <a href="https://myaccount.google.com" target="_blank"><img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/google.png" alt="Google"></a>
+                    <a href="https://microsoft.com" target="_blank"><img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/microsoft.png" alt="Microsoft"></a>
+                    <a href="https://www.instagram.com" target="_blank"><img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/instagram.png" alt="Instagram"></a>
+                    <a href="https://sinfulzen.github.io/IMP-Rewrite/site/login/signup/index.html" target="_blank"><img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/signup.png" alt="Sign Up"></a>
                 </div>
             </div>
         </div>
@@ -188,27 +191,26 @@
     </div>
 
     <script>
-
         const correctUsername = 'ImmortalModding';
         const correctPassword = 'Paradise';
 
-        function login() {
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-
-            if (username === correctUsername && password === correctPassword) {
-                window.location.href = 'https://sinfulzen.github.io/IMP-Rewrite/site/home/index.html';
-            } else {
-                document.getElementById('error-popup').style.display = 'block';
-            }
+        function redirectToHome() {
+            window.location.href = 'https://sinfulzen.github.io/IMP-Rewrite/home/index.html';
         }
 
         function closePopup() {
             document.getElementById('error-popup').style.display = 'none';
         }
 
-        function redirectGuest() {
-            window.location.href = 'https://sinfulzen.github.io/IMP-Rewrite/site/home/index.html';
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === correctUsername && password === correctPassword) {
+                redirectToHome();
+            } else {
+                document.getElementById('error-popup').style.display = 'block';
+            }
         }
     </script>
 </body>
