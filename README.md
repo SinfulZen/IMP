@@ -79,13 +79,13 @@ Various tools for Instagram, Discord & more.
 ### Credits
 All credits goes to the following People or groups for contributing to the project:
 - Encrypted Modding Crew
+  - Flaming Immortal
+  - IProFamily
+  - Zen Developer
+  - Kush
 - Creation Brotherhood
-- Flaming Immortal
-- IProFamily
-- Mayhem Modding
-- Zen Developer
+  - Mayhem Modding
 - Misaki Dev
-- Kush
 - Virus Mike
 - Modded Warfare
 - Gucci
