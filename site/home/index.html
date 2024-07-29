@@ -19,7 +19,7 @@
     <meta property="og:description" content="An intensive collection of PlayStation™3 content. We also have various unique tools for media enhancement and social platforms!">
     <meta property="og:image" content="https://sinfulzen.github.io/IMP-Rewrite/assets/images/branding/banner.png">
 
-    <title>IMP • Under Construction</title>
+    <title>IMP • Home</title>
 </head>
 </html>
 
@@ -30,73 +30,206 @@
     <style>
         body {
             background-color: #141414;
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: #fff;
+            overflow: hidden;
         }
-        .centered-body {
-            background-color: #1f1f1f;
-            border: 2px solid #D3A1E1;
-            border-radius: 15px;
+
+        .container {
+            background-color: #2d2d2d;
+            border: 2px solid #b19cd9;
+            border-radius: 10px;
             padding: 20px;
-            text-align: center;
             width: 300px;
+            text-align: center;
+            overflow-y: auto;
+            max-height: 70vh;
         }
+
+        .container::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .container::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .container::-webkit-scrollbar-thumb {
+            background-color: #b19cd9;
+            border-radius: 10px;
+        }
+
         .logo {
-            width: 45px;
-            height: auto;
-            position: relative;
-            top: -42px;
-            right: 0px;
-            bottom: 0px;
-            left: 0px;
             margin-bottom: 20px;
-}
         }
+
+        .logo-position {
+            margin-top: 0px;
+        }
+
+        .icon-set {
+            margin-bottom: 20px;
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
         .header {
-            font-size: 24px;
-            margin: 0;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+            color: white;
         }
-        .subheader {
-            font-size: 14px;
-            margin: 5px 0 20px 0;
+
+        .text {
+            font-size: 0.9em;
+            color: #cccccc;
         }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
         .button {
-            background-color: #D3A1E1;
+            background-color: #b19cd9;
             border: none;
-            border-radius: 15px;
+            border-radius: 10px;
             color: #141414;
             padding: 10px 20px;
-            margin: 5px;
-            font-size: 16px;
             cursor: pointer;
+            flex: 1;
+            margin: 0 5px;
+        }
+
+        .navbar {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #2d2d2d;
+            border: 2px solid #b19cd9;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            width: 300px;
+        }
+
+        .navbar-icon {
+            cursor: pointer;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            bottom: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #2d2d2d;
+            border: 2px solid #b19cd9;
+            border-radius: 10px;
+            padding: 10px;
+            width: 200px;
+            text-align: left;
+        }
+
+        .dropdown-item {
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-decoration: none;
+            padding: 5px;
+            cursor: pointer;
         }
-        .button img {
-            margin-right: 8px;
+
+        .dropdown-item:hover {
+            border: 1px solid #b19cd9;
+            border-radius: 5px;
+        }
+
+        .dropdown-item img {
+            margin-right: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="centered-body">
-        <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/construction.webp" alt="Logo" class="logo">
-        <h3 class="header">Under Construction</h3>
-        <p class="subheader">This section of the site is unfinished, please come back soon!</p>
-        <a href="https://discord.gg/vbGdtfNQXT" class="button">
-            <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/construction-discord.png" alt="Discord" width="20" height="20">
-            Discord
-        </a>
-        <a href="https://github.com/sinfulzen/IMP-Rewrite" class="button">
-            <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/construction-github.png" alt="GitHub" width="20" height="20">
-            GitHub
-        </a>
+    <div class="container">
+        <img src="image_path" alt="Logo" class="logo logo-position">
+        <br>
+        <br>
+        <br>
+        <div class="icon-set">
+            <img src="#" alt="#" class="icon">
+            <div class="header">Welcome</div>
+            <div class="text">This section will be updated soon!</div>
+        </div>
+        <br>
+        <div class="icon-set">
+            <img src="#" alt="#" class="icon">
+            <div class="header">About</div>
+            <div class="text">This section will be updated soon!</div>
+        </div>
+        <br>
+        <div class="icon-set">
+            <img src="#" alt="#" class="icon">
+            <div class="header">Content</div>
+            <div class="text">This section will be updated soon!</div>
+        </div>
+        <div class="buttons">
+            <button class="button" onclick="window.location.href='#'">More Info</button>
+            <button class="button" onclick="window.location.href='#'">Downloads</button>
+        </div>
     </div>
+    <div class="navbar">
+        <img src="#" alt="#" class="navbar-icon" onclick="window.location.href='#'">
+        <img src="#" alt="#" class="navbar-icon" onclick="toggleDropdown()">
+        <img src="#" alt="#" class="navbar-icon" onclick="window.location.href='#'">
+    </div>
+    <div class="dropdown-menu" id="dropdownMenu">
+        <div class="dropdown-item" onclick="window.location.href='#'">
+            <img src="#" alt="#" width="20">
+            Home
+        </div>
+        <div class="dropdown-item" onclick="window.location.href='#'">
+            <img src="#" alt="#" width="20">
+            Info
+        </div>
+        <div class="dropdown-item" onclick="window.location.href='#'">
+            <img src="#" alt="#" width="20">
+            Downloads
+        </div>
+        <div class="dropdown-item" onclick="window.location.href='#'">
+            <img src="#" alt="#" width="20">
+            Tools
+        </div>
+        <div class="dropdown-item" onclick="window.location.href='#'">
+            <img src="#" alt="#" width="20">
+            Experiments
+        </div>
+    </div>
+    <script>
+        function toggleDropdown() {
+            const dropdownMenu = document.getElementById('dropdownMenu');
+            if (dropdownMenu.style.display === 'block') {
+                dropdownMenu.style.display = 'none';
+            } else {
+                dropdownMenu.style.display = 'block';
+            }
+        }
+
+        document.addEventListener('click', function(event) {
+            const dropdownMenu = document.getElementById('dropdownMenu');
+            const isClickInside = dropdownMenu.contains(event.target) || event.target.classList.contains('navbar-icon');
+            if (!isClickInside) {
+                dropdownMenu.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
