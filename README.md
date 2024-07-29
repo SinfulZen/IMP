@@ -73,7 +73,8 @@ Various tools for Instagram, Discord & more.
 </details>
   
 ### Notes
-Please note that as there's only one Developer working on the project (currently), production will be slow. The project is a work in progress though and will go through several updates daily!
+- Please note that as there's only one Developer working on the project (currently), production will be slow. The project is a work in progress though and will go through several updates daily!
+- To view the website properly on mobile, enable Desktop mode. This is just until We implement features to ensure the site displays correctly across all platforms and devices.
 
 ### Credits
 All credits goes to the following People or groups for contributing to the project:
