@@ -107,6 +107,10 @@ All credits goes to the following People or groups for contributing to the proje
 
 <a href="https://www.youtube.com/@FlaMinG_IMmortALbackup" style="text-decoration: none;">
   <img src="https://img.shields.io/badge/Flaming%20Immortal-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Flaming Immortal">
+</a>  
+
+<a href="https://www.youtube.com/@Official.SinfulZen" style="text-decoration: none;">
+  <img src="https://img.shields.io/badge/Sinful%20Zen-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Sinful Zen">
 </a>
 
 ### Terms Of Service
