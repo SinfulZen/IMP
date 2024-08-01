@@ -1,4 +1,4 @@
-![Banner](https://github.com/user-attachments/assets/fef02ac4-5a88-4f4c-8cc1-cab6eb61c574)
+![Polish_20240801_011457454](https://github.com/user-attachments/assets/11fe3557-9797-439f-a8ec-6edc860a30d2)
 ## Immortal Modding Paradise (Rewrite)
 A rewrite of the already existing [Immortal Modding Paradise](https://github.com/SinfulZen/IMP) repo.
 
