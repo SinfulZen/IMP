@@ -36,67 +36,105 @@
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-            color: #fff;
+            overflow: hidden;
         }
-        .centered-body {
-            background-color: #1f1f1f;
-            border: 2px solid #D3A1E1;
+
+        .container {
+            background-color: #2e2e2e;
+            border: 2px solid #D8BFD8;
             border-radius: 15px;
-            padding: 20px;
             text-align: center;
-            width: 300px;
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+            color: white;
+            max-height: 90vh;
+            overflow-y: auto;
         }
-        .logo {
+
+        .logo img {
             width: 45px;
             height: auto;
-            position: relative;
-            top: -42px;
-            right: 0px;
-            bottom: 0px;
-            left: 0px;
-            margin-bottom: 20px;
-}
         }
-        .header {
-            font-size: 24px;
-            margin: 0;
+
+        .text {
+            margin: 20px 0;
+            color: white;
         }
-        .subheader {
-            font-size: 14px;
-            margin: 5px 0 20px 0;
-        }
-        .button {
-            background-color: #D3A1E1;
-            border: none;
-            border-radius: 15px;
-            color: #141414;
-            padding: 10px 20px;
-            margin: 5px;
-            font-size: 16px;
-            cursor: pointer;
+
+        .buttons {
             display: flex;
-            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
             justify-content: center;
-            text-decoration: none;
         }
-        .button img {
-            margin-right: 8px;
+
+        .buttons button {
+            background-color: #D8BFD8;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            color: #2e2e2e;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            flex: 1 0 45%;
+        }
+
+        .buttons button:hover {
+            background-color: #C0A3C8;
+        }
+
+        .container::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        .container::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .container::-webkit-scrollbar-thumb {
+            background-color: #D8BFD8;
+            border-radius: 20px;
+            border: 3px solid transparent;
+            background-clip: padding-box;
         }
     </style>
 </head>
 <body>
-    <div class="centered-body">
-        <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/construction.webp" alt="Logo" class="logo">
-        <h3 class="header">Under Construction</h3>
-        <p class="subheader">This section of the site is unfinished, please come back soon!</p>
-        <a href="https://discord.gg/vbGdtfNQXT" class="button">
-            <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/construction-discord.png" alt="Discord" width="20" height="20">
-            Discord
-        </a>
-        <a href="https://github.com/sinfulzen/IMP-Rewrite" class="button">
-            <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/construction-github.png" alt="GitHub" width="20" height="20">
-            GitHub
-        </a>
+    <div class="container">
+        <div class="logo">
+            <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/firmware.png" alt="Logo">
+        </div>
+        <div class="text">
+            <p>Looking for an official firmware to download?</p>
+        </div>
+        <div class="buttons">
+            <button onclick="downloadFile('https://mega.nz/file/lAZQhSLJ#l0fzOfE31x3C-7KM9p6KpVzScjElPkHTAdgY4vfPJso')">4.91</button>
+            <button onclick="downloadFile('https://mega.nz/file/tMRDhQzJ#trRO7N4S3HKrtPFbaBkYr1G25Csllr-6doMIWJvKTR0')">4.90</button>
+            <button onclick="downloadFile('https://mega.nz/file/gYwhlBgZ#7r558N6Y2UXQ4e8jHWnd7_1PwqkgPneEZSQuFRRM3gc')">4.89</button>
+            <button onclick="downloadFile('https://mega.nz/file/oYA23BrQ#UUQFFFOQBqNroSlXmRoAmfJ137i1mkgOsGmvm90FGTw')">4.88</button>
+            <button onclick="downloadFile('https://mega.nz/file/xIoDlI6B#y15X0bziywfDzuaWyMmL2v1cvgqgbmTrrLhIC85WSuU')">4.87</button>
+            <button onclick="downloadFile('https://mega.nz/file/ldAliKJC#kh2Ja4kIPTnV-cxAQ1B-C-d_1FSRJn1HIvdPzmn4uNc')">4.86</button>
+            <button onclick="downloadFile('https://mega.nz/#!kIY0TY6Z!ZLEBPUD4qyWCtPHAtH4QwvgNlHlCj8KNJ1t0Xljf0x0')">4.85</button>
+            <button onclick="downloadFile('https://mega.nz/#!YdA0DahB!m2Oe3x_xkpi_an7FJndors0lJTInwoz_tBc_9U54sAI')">4.84</button>
+            <button onclick="downloadFile('https://mega.nz/#!QJpTEIhQ!pqH4_GNzz-v0qzvBAM2vXFGo8uY7glOeJh8k2db8NSk')">4.83</button>
+            <button onclick="downloadFile('https://mega.nz/#!dIAgQA5D!HdV3Zxr5rEaNgt1agKssXQ-9TRH_WMYxCUOvWTbz2QA')">4.82</button>
+            <button onclick="downloadFile('https://mega.co.nz/#!lJ4TRYLL!74Oqm1WozDZ_lC7vC6-EzRJn06hwWo-nCTJQuUsN35k')">4.81</button>
+            <button onclick="downloadFile('https://mega.co.nz/#!MNo3UABS!xXttNkaI2MnNL3fvopGEuUQPLosmWHRuk-ev8XPde2Y')">4.80</button>
+            <button onclick="downloadFile('https://mega.co.nz/#!MExX1QyA!Dk72dHG1S82WpMdLfUuHeR1Rpcsfi6TIzI3OsSN693U')">4.75</button>
+            <button onclick="downloadFile('https://mega.co.nz/#!VRwhBYrJ!DzFJyzvqqbExQks6_TSV4nZ9tFYezkdKWKgiddgwHZI')">4.55</button>
+            <button onclick="downloadFile('https://mega.co.nz/#!NVwRGIQS!Pml4diGNhW3aMJe1mnSirW_66gAZKZnWo6cmqKMDvqU')">3.55</button>
+        </div>
     </div>
+    <script>
+        function downloadFile(path) {
+            const link = document.createElement('a');
+            link.href = path;
+            link.download = path.split('/').pop();
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
 </body>
 </html>
