@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<!-- META, OG & SEO TAGS -->
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="An intensive collection of PlayStation™3 content. We also have various unique tools for media enhancement and social platforms!">
+    <meta name="keywords" content="Flaming, Immortal, Zen, Dev, Development, Modding, Paradise, IMP, Rewrite, Google, GitHub, Web, PlayStation™3, PlayStation, PS3, Gaming, Hack, Hacks, Hacker, Hacking, Mod, Mods, Modding, Modder, Homebrew, Terms, TOS, Jailbreak, Exploit, Exploits, Hybrid, Custom, HFW, CFW">
+    <meta name="application-name" content="https://sinfulzen.github.io/IMP-Rewrite">
+    <link rel="icon" href="assets/images/branding/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/branding/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="admin/manifest/manifest.json">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sinfulzen.github.io/IMP-Rewrite">
+    <meta property="og:title" content="Immortal Modding Paradise">
+    <meta property="og:description" content="An intensive collection of PlayStation™3 content. We also have various unique tools for media enhancement and social platforms!">
+    <meta property="og:image" content="https://sinfulzen.github.io/IMP-Rewrite/assets/images/branding/banner.png">
+
+    <title>IMP • Home</title>
+</head>
+</html>
+
+<!-- MAIN -->
+<html>
+<head>
+
+    <style>
+        body {
+            background-color: #141414;
+            margin: 0;
+            padding: 0;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background-color: #2d2d2d;
+            border: 2px solid #c6a2c6;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            overflow-y: auto;
+            max-height: 70vh;
+            color: white;
+        }
+
+        .container::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .container::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .container::-webkit-scrollbar-thumb {
+            background-color: #c6a2c6;
+            border-radius: 10px;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        .logo-position {
+            margin-top: 0px;
+        }
+
+        .icon-set {
+            margin-bottom: 20px;
+        }
+
+        .logo-img {
+            width: 45px;
+            height: 45px;
+        }
+
+        .welcome-icon {
+            width: 28px;
+            height: 28px;
+        }
+
+        .about-icon {
+            width: 28px;
+            height: 28px;
+        }
+
+        .content-icon {
+            width: 28px;
+            height: 28px;
+        }
+
+        .navbar-account-icon {
+            width: 25px;
+            height: 25px;
+        }
+
+        .navbar-menu-icon {
+            width: 25px;
+            height: 25px;
+        }
+
+        .navbar-settings-icon {
+            width: 25px;
+            height: 25px;
+        }
+
+        .dropdown-home-icon {
+            width: 22px;
+            height: 22px;
+        }
+
+        .dropdown-info-icon {
+            width: 22px;
+            height: 22px;
+        }
+
+        .dropdown-download-icon {
+            width: 22px;
+            height: 22px;
+        }
+
+        .dropdown-tools-icon {
+            width: 22px;
+            height: 22px;
+        }
+
+        .dropdown-experiments-icon {
+            width: 22px;
+            height: 22px;
+        }
+
+        .header {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+            color: white;
+        }
+
+        .text {
+            font-size: 0.9em;
+            color: white;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .button {
+            background-color: #c6a2c6;
+            border: none;
+            border-radius: 10px;
+            color: #141414;
+            padding: 10px 20px;
+            cursor: pointer;
+            flex: 1;
+            margin: 0 5px;
+        }
+
+        .navbar {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #2d2d2d;
+            border: 2px solid #c6a2c6;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            width: 300px;
+            color: white;
+        }
+
+        .navbar-icon {
+            cursor: pointer;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            bottom: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #2d2d2d;
+            border: 2px solid #c6a2c6;
+            border-radius: 10px;
+            padding: 10px;
+            width: 200px;
+            text-align: left;
+            color: white;
+        }
+
+        .dropdown-item {
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .dropdown-item:hover {
+            border: 1px solid #c6a2c6;
+            border-radius: 5px;
+        }
+
+        .dropdown-item img {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/branding/logo.png" alt="#" class="logo logo-position logo-img">
+        <br>
+        <br>
+        <br>
+        <div class="icon-set">
+            <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/welcome.png" alt="#" class="icon welcome-icon">
+            <div class="header">Welcome</div>
+            <div class="text">Welcome to the IMP (Immortal Modding Paradise). An AIO collection of content for the PS3. We also have various online tools, great for enhancing Your browsing experience!</div>
+        </div>
+        <br>
+        <div class="icon-set">
+            <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/about.png" alt="#" class="icon about-icon">
+            <div class="header">About</div>
+            <div class="text">IMP (or Immortal Modding Paradise) is a collection of content for the PlayStation™3. We aim to put everything all in one place, making it easier for You to find and download / use. As this project is non funded, We're hosting it using GitHub Pages. This makes it free and easy to access for everything.
+                <br>
+                <br>
+            The project was founded by Flaming Immortal and is being worked on by Zen Developments. Flaming Immortal is a PS3 Modder and YouTuber. He showcases mods and His own projects (such as mod loaders). Zen (the Founder and CEO of Zen Developments) is a Developer that runs a small Team. He works on numerous projects regarding Software Engineering, Reverse Engineering, Social Engineering, Hacking, Web Development and Music Production</div>
+        </div>
+        <br>
+        <div class="icon-set">
+            <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/download.png" alt="#" class="icon content-icon">
+            <div class="header">Content</div>
+            <div class="text">What can You find on Our site? Tons is the answer! From software and firmwares to games and DLC, We have it all! If You'd like to find out more about Us or view Our downloads, use the buttons below. Have fun exploring and We hope You enjoy Your stay with Us!</div>
+        </div>
+        <div class="buttons">
+            <button class="button" onclick="window.location.href='https://sinfulzen.github.io/IMP-Rewrite/site/info/index.html'">More Info</button>
+            <button class="button" onclick="window.location.href='https://sinfulzen.github.io/IMP-Rewrite/site/content/index.html'">Downloads</button>
+        </div>
+    </div>
+    <div class="navbar">
+        <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/account.png" alt="#" class="navbar-icon navbar-account-icon" onclick="window.location.href='https://sinfulzen.github.io/IMP-Rewrite/site/login/index.html'">
+        <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/menu.png" alt="#" class="navbar-icon navbar-menu-icon" onclick="toggleDropdown()">
+        <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/settings.png" alt="#" class="navbar-icon navbar-settings-icon" onclick="window.location.href='https://sinfulzen.github.io/IMP-Rewrite/site/settings.html'">
+    </div>
+    <div class="dropdown-menu" id="dropdownMenu">
+        <div class="dropdown-item" onclick="window.location.href='https://sinfulzen.github.io/IMP-Rewrite/site/home/index.html'">
+            <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/home.png" alt="#" class="dropdown-home-icon">
+            Home
+        </div>
+        <div class="dropdown-item" onclick="window.location.href='https://sinfulzen.github.io/IMP-Rewrite/site/info/index.html'">
+            <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/info.png" alt="#" class="dropdown-info-icon">
+            Info
+        </div>
+        <div class="dropdown-item" onclick="window.location.href='https://sinfulzen.github.io/IMP-Rewrite/site/content/index.html'">
+            <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/download.png" alt="#" class="dropdown-download-icon">
+            Downloads
+        </div>
+        <div class="dropdown-item" onclick="window.location.href='https://sinfulzen.github.io/IMP-Rewrite/site/tools/index.html'">
+            <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/tools.png" alt="#" class="dropdown-tools-icon">
+            Tools
+        </div>
+        <div class="dropdown-item" onclick="window.location.href='https://sinfulzen.github.io/IMP-Rewrite/experiments/index.html'">
+            <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/experiments.png" alt="#" class="dropdown-experiments-icon">
+            Experiments
+        </div>
+    </div>
+    <script>
+        function toggleDropdown() {
+            const dropdownMenu = document.getElementById('dropdownMenu');
+            if (dropdownMenu.style.display === 'block') {
+                dropdownMenu.style.display = 'none';
+            } else {
+                dropdownMenu.style.display = 'block';
+            }
+        }
+
+        document.addEventListener('click', function(event) {
+            const dropdownMenu = document.getElementById('dropdownMenu');
+            const isClickInside = dropdownMenu.contains(event.target) || event.target.classList.contains('navbar-icon');
+            if (!isClickInside) {
+                dropdownMenu.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
