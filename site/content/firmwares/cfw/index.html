@@ -19,14 +19,17 @@
     <meta property="og:description" content="An intensive collection of PlayStation™3 content. We also have various unique tools for media enhancement and social platforms!">
     <meta property="og:image" content="https://sinfulzen.github.io/IMP-Rewrite/assets/images/branding/banner.png">
 
-    <title>IMP • Under Construction</title>
+    <title>IMP • CFW Downloads</title>
 </head>
 </html>
 
 <!-- MAIN -->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Page</title>
     <style>
         body {
             background-color: #141414;
@@ -36,67 +39,90 @@
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-            color: #fff;
+            overflow: hidden;
         }
-        .centered-body {
-            background-color: #1f1f1f;
-            border: 2px solid #D3A1E1;
+
+        .container {
+            background-color: #2e2e2e;
+            border: 2px solid #D8BFD8;
             border-radius: 15px;
-            padding: 20px;
             text-align: center;
-            width: 300px;
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+            color: white;
+            max-height: 90vh;
+            overflow-y: auto;
         }
-        .logo {
-            width: 45px;
-            height: auto;
-            position: relative;
-            top: -42px;
-            right: 0px;
-            bottom: 0px;
-            left: 0px;
-            margin-bottom: 20px;
-}
+
+        .logo img {
+            width: 45px; /* Adjust the size of the logo here */
+            height: auto; /* Maintain aspect ratio */
         }
-        .header {
-            font-size: 24px;
-            margin: 0;
+
+        .text {
+            margin: 20px 0;
+            color: white;
         }
-        .subheader {
-            font-size: 14px;
-            margin: 5px 0 20px 0;
-        }
-        .button {
-            background-color: #D3A1E1;
-            border: none;
-            border-radius: 15px;
-            color: #141414;
-            padding: 10px 20px;
-            margin: 5px;
-            font-size: 16px;
-            cursor: pointer;
+
+        .buttons {
             display: flex;
-            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
             justify-content: center;
-            text-decoration: none;
         }
-        .button img {
-            margin-right: 8px;
+
+        .buttons button {
+            background-color: #D8BFD8;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            color: #2e2e2e;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            flex: 1 0 45%; /* Adjust for responsiveness */
+        }
+
+        .buttons button:hover {
+            background-color: #C0A3C8;
+        }
+
+        .container::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        .container::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .container::-webkit-scrollbar-thumb {
+            background-color: #D8BFD8;
+            border-radius: 20px;
+            border: 3px solid transparent;
+            background-clip: padding-box;
         }
     </style>
 </head>
 <body>
-    <div class="centered-body">
-        <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/construction.webp" alt="Logo" class="logo">
-        <h3 class="header">Under Construction</h3>
-        <p class="subheader">This section of the site is unfinished, please come back soon!</p>
-        <a href="https://discord.gg/vbGdtfNQXT" class="button">
-            <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/construction-discord.png" alt="Discord" width="20" height="20">
-            Discord
-        </a>
-        <a href="https://github.com/sinfulzen/IMP-Rewrite" class="button">
-            <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/construction-github.png" alt="GitHub" width="20" height="20">
-            GitHub
-        </a>
+    <div class="container">
+        <div class="logo">
+            <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/firmware.png" alt="Logo">
+        </div>
+        <div class="text">
+            <p>Looking for a custom firmware to download?</p>
+        </div>
+        <div class="buttons">
+            <button onclick="redirectTo('https://sinfulzen.github.io/IMP-Rewrite/site/content/firmwares/cfw/evilnat/index.html')">Evilnat</button>
+            <button onclick="redirectTo('https://sinfulzen.github.io/IMP-Rewrite/site/content/firmwares/cfw/rebug/index.html')">Rebug</button>
+            <button onclick="redirectTo('https://sinfulzen.github.io/IMP-Rewrite/site/content/firmwares/cfw/zero/index.html')">Zero</button>
+            <button onclick="redirectTo('https://sinfulzen.github.io/IMP-Rewrite/site/content/firmwares/cfw/rogero/index.html')">Rogero</button>
+            <button onclick="redirectTo('https://sinfulzen.github.io/IMP-Rewrite/site/content/firmwares/cfw/ferrox/index.html')">Ferrox</button>
+        </div>
     </div>
+    <script>
+        function redirectTo(url) {
+            window.location.href = url;
+        }
+    </script>
 </body>
 </html>
