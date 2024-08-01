@@ -19,7 +19,7 @@
     <meta property="og:description" content="An intensive collection of PlayStation™3 content. We also have various unique tools for media enhancement and social platforms!">
     <meta property="og:image" content="https://sinfulzen.github.io/IMP-Rewrite/assets/images/branding/banner.png">
 
-    <title>IMP • Under Construction</title>
+    <title>IMP • Firmwares</title>
 </head>
 </html>
 
@@ -36,67 +36,70 @@
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-            color: #fff;
         }
-        .centered-body {
-            background-color: #1f1f1f;
-            border: 2px solid #D3A1E1;
+
+        .container {
+            background-color: #2e2e2e;
+            border: 2px solid #D8BFD8;
             border-radius: 15px;
-            padding: 20px;
             text-align: center;
-            width: 300px;
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+            color: white;
         }
-        .logo {
+
+        .logo img {
             width: 45px;
             height: auto;
-            position: relative;
-            top: -42px;
-            right: 0px;
-            bottom: 0px;
-            left: 0px;
-            margin-bottom: 20px;
-}
         }
-        .header {
-            font-size: 24px;
-            margin: 0;
+
+        .text {
+            margin: 20px 0;
+            color: white;
         }
-        .subheader {
-            font-size: 14px;
-            margin: 5px 0 20px 0;
-        }
-        .button {
-            background-color: #D3A1E1;
-            border: none;
-            border-radius: 15px;
-            color: #141414;
-            padding: 10px 20px;
-            margin: 5px;
-            font-size: 16px;
-            cursor: pointer;
+
+        .buttons {
             display: flex;
-            align-items: center;
+            gap: 5px;
             justify-content: center;
-            text-decoration: none;
         }
-        .button img {
-            margin-right: 8px;
+
+        .buttons button {
+            background-color: #D8BFD8;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            color: #2e2e2e;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            flex: 1;
+            max-width: 33%;
+        }
+
+        .buttons button:hover {
+            background-color: #C0A3C8;
         }
     </style>
 </head>
 <body>
-    <div class="centered-body">
-        <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/construction.webp" alt="Logo" class="logo">
-        <h3 class="header">Under Construction</h3>
-        <p class="subheader">This section of the site is unfinished, please come back soon!</p>
-        <a href="https://discord.gg/vbGdtfNQXT" class="button">
-            <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/construction-discord.png" alt="Discord" width="20" height="20">
-            Discord
-        </a>
-        <a href="https://github.com/sinfulzen/IMP-Rewrite" class="button">
-            <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/construction-github.png" alt="GitHub" width="20" height="20">
-            GitHub
-        </a>
+    <div class="container">
+        <div class="logo">
+            <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/firmware.png" alt="#">
+        </div>
+        <div class="text">
+            <p>Looking for a firmware to install? We have a huge collection! While currently, We only have the firmwares mainly in use, We'll update Our site so ALL are included!</p>
+        </div>
+        <div class="buttons">
+            <button onclick="redirect('https://sinfulzen.github.io/IMP-Rewrite/site/content/firmwares/ofw/index.html')">OFW</button>
+            <button onclick="redirect('https://sinfulzen.github.io/IMP-Rewrite/site/content/firmwares/hfw/index.html')">HFW</button>
+            <button onclick="redirect('https://sinfulzen.github.io/IMP-Rewrite/site/content/firmwares/cfw/index.html')">CFW</button>
+        </div>
     </div>
+    <script>
+        function redirect(url) {
+            window.location.href = url;
+        }
+    </script>
 </body>
 </html>
