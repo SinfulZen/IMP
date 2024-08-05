@@ -19,7 +19,7 @@
     <meta property="og:description" content="An intensive collection of PlayStation™3 content. We also have various unique tools for media enhancement and social platforms!">
     <meta property="og:image" content="https://sinfulzen.github.io/IMP-Rewrite/assets/images/branding/banner.png">
 
-    <title>IMP • Under Construction</title>
+    <title>IMP • Admin Panel</title>
 </head>
 </html>
 
@@ -31,72 +31,229 @@
         body {
             background-color: #141414;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
             color: #fff;
+            height: 100vh;
+            overflow: hidden;
         }
-        .centered-body {
-            background-color: #1f1f1f;
-            border: 2px solid #D3A1E1;
+
+        .side-panel {
+            background-color: #1e1e1e;
+            border: 2px solid red;
+            border-radius: 15px;
+            width: 200px;
+            height: calc(100vh - 20px);
+            margin: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .side-panel h2 {
+            margin: 0 0 20px 0;
+            text-align: center;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 10px;
+            transition: background 0.3s, border 0.3s;
+            cursor: pointer;
+        }
+
+        .option:hover {
+            border: 2px solid red;
+        }
+
+        .option img {
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        .main-panel {
+            background-color: #1e1e1e;
+            border: 2px solid red;
+            border-radius: 15px;
+            width: calc(100% - 260px);
+            margin: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .main-panel h1 {
+            margin: 0;
+        }
+
+        .main-panel h3 {
+            margin: 10px 0;
+            font-weight: normal;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .button {
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            padding: 10px 20px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: darkred;
+        }
+
+        .extra-text {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .loading-container {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .loading-bar {
+            width: 80%;
+            height: 20px;
+            background-color: lightgrey;
+            border: 2px solid red;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .loading-bar-inner {
+            height: 100%;
+            width: 0;
+            background-color: red;
+            border-radius: 8px;
+        }
+
+        .loading-counter {
+            margin-top: 10px;
+        }
+
+        .popup {
+            display: none;
+            position: absolute;
+            bottom: 20px;
+            left: 57%;
+            transform: translateX(-50%);
+            background-color: #1e1e1e;
+            border: 2px solid red;
             border-radius: 15px;
             padding: 20px;
             text-align: center;
-            width: 300px;
         }
-        .logo {
-            width: 45px;
-            height: auto;
-            position: relative;
-            top: -42px;
-            right: 0px;
-            bottom: 0px;
-            left: 0px;
-            margin-bottom: 20px;
-}
-        }
-        .header {
-            font-size: 24px;
-            margin: 0;
-        }
-        .subheader {
-            font-size: 14px;
-            margin: 5px 0 20px 0;
-        }
-        .button {
-            background-color: #D3A1E1;
-            border: none;
-            border-radius: 15px;
-            color: #141414;
-            padding: 10px 20px;
-            margin: 5px;
-            font-size: 16px;
+
+        .popup .close-text {
+            color: red;
             cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
+            margin-top: 10px;
+            display: block;
         }
-        .button img {
-            margin-right: 8px;
-        }
+
     </style>
 </head>
 <body>
-    <div class="centered-body">
-        <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/construction.webp" alt="Logo" class="logo">
-        <h3 class="header">Under Construction</h3>
-        <p class="subheader">This section of the site is unfinished, please come back soon!</p>
-        <a href="https://discord.gg/vbGdtfNQXT" class="button">
-            <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/construction-discord.png" alt="Discord" width="20" height="20">
-            Discord
-        </a>
-        <a href="https://github.com/sinfulzen/IMP-Rewrite" class="button">
-            <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/construction-github.png" alt="GitHub" width="20" height="20">
-            GitHub
-        </a>
+    <div class="side-panel">
+        <h2>Admin Panel</h2>
+        <div class="option">
+            <img src="#" alt="#">
+            <span>Manage Site</span>
+        </div>
+        <div class="option">
+            <img src="#" alt="#">
+            <span>Manage Users</span>
+        </div>
+        <div class="option">
+            <img src="#" alt="#">
+            <span>Debugging</span>
+        </div>
+        <div class="option">
+            <img src="#" alt="#">
+            <span>Settings</span>
+        </div>
     </div>
+    <div class="main-panel">
+        <h1>Home</h1>
+        <h3>Welcome back, DefaultAdmin!</h3>
+        <div class="button-container">
+            <a href="#" class="button">Stats</a>
+            <a href="#" class="button">Logs</a>
+        </div>
+        <br>
+         <br>
+          <br>
+         <br>
+        <br>
+        <div class="extra-text">Only authorized Users can view the entire Admin panel. You are not an authorized User, access is blocked.</div>
+        <br>
+        <button class="button" id="start-loading-button">Debug</button>
+        <div class="loading-container" id="loading-container">
+            <div class="loading-bar">
+                <div class="loading-bar-inner" id="loading-bar-inner"></div>
+            </div>
+            <div class="loading-counter" id="loading-counter">0%</div>
+        </div>
+    </div>
+    <div class="popup" id="popup">
+        <div class="popup-text">Debugging process was complete! You're not an authorized User, no data is available to You!</div>
+        <div class="close-text" id="close-popup">Understood!</div>
+    </div>
+
+    <script>
+        document.getElementById('start-loading-button').addEventListener('click', function() {
+            const loadingContainer = document.getElementById('loading-container');
+            const loadingBarInner = document.getElementById('loading-bar-inner');
+            const loadingCounter = document.getElementById('loading-counter');
+            const popup = document.getElementById('popup');
+            loadingContainer.style.display = 'flex';
+
+            let width = 0;
+            loadingBarInner.style.width = width + '%';
+            loadingCounter.innerText = width + '%';
+
+            setTimeout(function() {
+                const interval = setInterval(function() {
+                    if (width >= 100) {
+                        clearInterval(interval);
+                        popup.style.display = 'block';
+                    } else {
+                        width++;
+                        loadingBarInner.style.width = width + '%';
+                        loadingCounter.innerText = width + '%';
+                    }
+                }, 50);
+            }, 2000);
+        });
+
+        document.getElementById('close-popup').addEventListener('click', function() {
+            document.getElementById('popup').style.display = 'none';
+        });
+    </script>
 </body>
 </html>
