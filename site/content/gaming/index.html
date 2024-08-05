@@ -19,7 +19,7 @@
     <meta property="og:description" content="An intensive collection of PlayStation™3 content. We also have various unique tools for media enhancement and social platforms!">
     <meta property="og:image" content="https://sinfulzen.github.io/IMP-Rewrite/assets/images/branding/banner.png">
 
-    <title>IMP • Under Construction</title>
+    <title>IMP • Gaming</title>
 </head>
 </html>
 
@@ -36,67 +36,71 @@
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-            color: #fff;
         }
-        .centered-body {
-            background-color: #1f1f1f;
-            border: 2px solid #D3A1E1;
+
+        .container {
+            background-color: #1e1e1e;
+            border: 2px solid #ff0000;
             border-radius: 15px;
-            padding: 20px;
             text-align: center;
-            width: 300px;
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+            color: white;
+            box-sizing: border-box;
         }
-        .logo {
+
+        .logo img {
             width: 45px;
             height: auto;
-            position: relative;
-            top: -42px;
-            right: 0px;
-            bottom: 0px;
-            left: 0px;
-            margin-bottom: 20px;
-}
         }
-        .header {
-            font-size: 24px;
-            margin: 0;
+
+        .text {
+            margin: 20px 0;
         }
-        .subheader {
-            font-size: 14px;
-            margin: 5px 0 20px 0;
-        }
-        .button {
-            background-color: #D3A1E1;
-            border: none;
-            border-radius: 15px;
-            color: #141414;
-            padding: 10px 20px;
-            margin: 5px;
-            font-size: 16px;
-            cursor: pointer;
+
+        .buttons {
             display: flex;
-            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
             justify-content: center;
-            text-decoration: none;
         }
-        .button img {
-            margin-right: 8px;
+
+        .buttons button {
+            background-color: #ff0000;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            flex: 1 1 30%;
+            box-sizing: border-box;
+        }
+
+        .buttons button:hover {
+            background-color: darkred;
         }
     </style>
 </head>
 <body>
-    <div class="centered-body">
-        <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/construction.webp" alt="Logo" class="logo">
-        <h3 class="header">Under Construction</h3>
-        <p class="subheader">This section of the site is unfinished, please come back soon!</p>
-        <a href="https://discord.gg/vbGdtfNQXT" class="button">
-            <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/construction-discord.png" alt="Discord" width="20" height="20">
-            Discord
-        </a>
-        <a href="https://github.com/sinfulzen/IMP-Rewrite" class="button">
-            <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/construction-github.png" alt="GitHub" width="20" height="20">
-            GitHub
-        </a>
+    <div class="container">
+        <div class="logo">
+            <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/download.png" alt="Logo">
+        </div>
+        <div class="text">
+            <p>Looking for games, DLC or some mods? Well, You're in the right place!</p>
+        </div>
+        <div class="buttons">
+            <button onclick="redirect('#')">Games</button>
+            <button onclick="redirect('#')">DLC</button>
+            <button onclick="redirect('#')">Mods</button>
+        </div>
     </div>
+    <script>
+        function redirect(url) {
+            window.location.href = url;
+        }
+    </script>
 </body>
 </html>
