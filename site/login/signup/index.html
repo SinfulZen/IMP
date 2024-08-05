@@ -26,7 +26,6 @@
 <!-- MAIN -->
 <html>
 <head>
-
     <style>
         body {
             background-color: #141414;
@@ -55,7 +54,7 @@
 
         .signup-body {
             background-color: #1e1e1e;
-            border: 2px solid #d5a0d5;
+            border: 2px solid #ff0000;
             border-radius: 15px;
             padding: 20px;
             width: 350px;
@@ -65,7 +64,7 @@
         .input-group {
             display: flex;
             align-items: center;
-            border: 2px solid #d5a0d5;
+            border: 2px solid #ff0000;
             border-radius: 15px;
             margin-bottom: 15px;
             background-color: #1e1e1e;
@@ -87,8 +86,20 @@
             outline: none;
         }
 
+        .password-field {
+            border: none;
+            background: transparent;
+            color: #fff;
+            padding: 10px;
+            width: calc(100% - 40px);
+            border-radius: 15px;
+            outline: none;
+            -webkit-text-security: disc;
+            text-security: disc;
+        }
+
         .signup-button {
-            background-color: #d5a0d5;
+            background-color: #ff0000;
             border: none;
             border-radius: 15px;
             color: #fff;
@@ -109,12 +120,12 @@
         }
 
         .signup-body-wrapper::-webkit-scrollbar-thumb {
-            background: #d5a0d5;
+            background: #ff0000;
             border-radius: 10px;
         }
 
         .signup-body-wrapper::-webkit-scrollbar-thumb:hover {
-            background: #b87ab9;
+            background: #ff0000;
         }
     </style>
 </head>
@@ -137,15 +148,15 @@
                 </div>
                 <div class="input-group">
                     <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/email.png" alt="#" class="input-icon">
-                    <input type="password" placeholder="Email Address" class="input-field">
+                    <input type="email" placeholder="Email Address" class="input-field">
                 </div>
                 <div class="input-group">
                     <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/phone.png" alt="#" class="input-icon">
-                    <input type="password" placeholder="Phone Number" class="input-field">
+                    <input type="tel" placeholder="Phone Number" class="input-field">
                 </div>
                 <div class="input-group">
                     <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/password.png" alt="#" class="input-icon">
-                    <input type="text" placeholder="Password" class="input-field">
+                    <input type="password" placeholder="Password" class="password-field">
                 </div>
                 <div class="input-group">
                     <img src="https://sinfulzen.github.io/IMP-Rewrite/assets/images/icons/phrase.png" alt="#" class="input-icon">
