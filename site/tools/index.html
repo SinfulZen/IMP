@@ -19,7 +19,7 @@
     <meta property="og:description" content="An intensive collection of PlayStation™3 content. We also have various unique tools for media enhancement and social platforms!">
     <meta property="og:image" content="https://sinfulzen.github.io/IMP/assets/images/branding/banner.png">
 
-    <title>IMP • Under Construction</title>
+    <title>IMP • Tools</title>
 </head>
 </html>
 
@@ -29,74 +29,56 @@
 
     <style>
         body {
-            background-color: #141414;
             display: flex;
+            height: 100vh;
+            background-color: #141414;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: #fff;
         }
-        .centered-body {
-            background-color: #1f1f1f;
-            border: 2px solid #ff0000;
-            border-radius: 15px;
-            padding: 20px;
+        .central-body {
+            background-color: #1e1e1e;
+            border: 2px solid red;
+            border-radius: 20px;
+            padding: 40px;
             text-align: center;
             width: 300px;
         }
-        .logo {
-            width: 45px;
-            height: auto;
-            position: relative;
-            top: -42px;
-            right: 0px;
-            bottom: 0px;
-            left: 0px;
+        .central-body h1 {
             margin-bottom: 20px;
-}
         }
-        .header {
-            font-size: 24px;
-            margin: 0;
-        }
-        .subheader {
-            font-size: 14px;
-            margin: 5px 0 20px 0;
-        }
-        .button {
-            background-color: #ff0000;
-            border: none;
-            border-radius: 15px;
-            color: #ffffff;
-            padding: 10px 20px;
-            margin: 5px;
-            font-size: 16px;
-            cursor: pointer;
+        .button-container {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
+            flex-direction: column;
+            gap: 10px;
         }
-        .button img {
-            margin-right: 8px;
+        .button-container button {
+            background-color: red;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button-container button:hover {
+            background-color: #ff3333;
         }
     </style>
 </head>
 <body>
-    <div class="centered-body">
-        <img src="https://sinfulzen.github.io/IMP/assets/images/icons/construction.webp" alt="Logo" class="logo">
-        <h3 class="header">Under Construction</h3>
-        <p class="subheader">This section of the site is unfinished, please come back soon!</p>
-        <a href="https://discord.gg/vbGdtfNQXT" class="button">
-            <img src="https://sinfulzen.github.io/IMP/assets/images/icons/construction-discord.png" alt="Discord" width="20" height="20">
-            Discord
-        </a>
-        <a href="https://github.com/sinfulzen/IMP" class="button">
-            <img src="https://sinfulzen.github.io/IMP/assets/images/icons/construction-github.png" alt="GitHub" width="20" height="20">
-            GitHub
-        </a>
+    <div class="central-body">
+        <p>Looking for some useful tools? We have a wide range for You to browse through!</p>
+        <div class="button-container">
+            <button onclick="window.location.href='#'">Discord</button>
+            <button onclick="window.location.href='#'">Instagram</button>
+            <button onclick="window.location.href='#'">Media</button>
+            <button onclick="window.location.href='#'">Stresser</button>
+            <button onclick="window.location.href='#'">YouTube</button>
+        </div>
     </div>
 </body>
 </html>
