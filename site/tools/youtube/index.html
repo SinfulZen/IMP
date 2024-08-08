@@ -19,7 +19,7 @@
     <meta property="og:description" content="An intensive collection of PlayStation™3 content. We also have various unique tools for media enhancement and social platforms!">
     <meta property="og:image" content="https://sinfulzen.github.io/IMP/assets/images/branding/banner.png">
 
-    <title>IMP • Under Construction</title>
+    <title>IMP • YouTube Tools</title>
 </head>
 </html>
 
@@ -29,74 +29,143 @@
 
     <style>
         body {
-            background-color: #141414;
             display: flex;
-            justify-content: center;
-            align-items: center;
             height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
+            background-color: #141414;
             color: #fff;
-        }
-        .centered-body {
-            background-color: #1f1f1f;
-            border: 2px solid #ff0000;
-            border-radius: 15px;
-            padding: 20px;
-            text-align: center;
-            width: 300px;
-        }
-        .logo {
-            width: 45px;
-            height: auto;
-            position: relative;
-            top: -42px;
-            right: 0px;
-            bottom: 0px;
-            left: 0px;
-            margin-bottom: 20px;
-}
-        }
-        .header {
-            font-size: 24px;
+            font-family: Arial, sans-serif;
             margin: 0;
-        }
-        .subheader {
-            font-size: 14px;
-            margin: 5px 0 20px 0;
-        }
-        .button {
-            background-color: #ff0000;
-            border: none;
-            border-radius: 15px;
-            color: #ffffff;
-            padding: 10px 20px;
-            margin: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
+            padding: 0;
             justify-content: center;
-            text-decoration: none;
+            align-items: center;
         }
-        .button img {
-            margin-right: 8px;
+        .central-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #1e1e1e;
+            border: 2px solid red;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            width: 400px;
+            height: 300px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .input-container {
+            width: 100%;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .input-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 20px;
+            border: 1px solid red;
+            background-color: #2a2a2a;
+            color: #fff;
+            text-align: center;
+        }
+        .input-container button {
+            background-color: red;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .input-container button:hover {
+            background-color: #ff3333;
+        }
+        .result {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .result p {
+            margin: 5px 0;
         }
     </style>
 </head>
 <body>
-    <div class="centered-body">
-        <img src="https://sinfulzen.github.io/IMP/assets/images/icons/construction.webp" alt="Logo" class="logo">
-        <h3 class="header">Under Construction</h3>
-        <p class="subheader">This section of the site is unfinished, please come back soon!</p>
-        <a href="https://discord.gg/vbGdtfNQXT" class="button">
-            <img src="https://sinfulzen.github.io/IMP/assets/images/icons/construction-discord.png" alt="Discord" width="20" height="20">
-            Discord
-        </a>
-        <a href="https://github.com/sinfulzen/IMP" class="button">
-            <img src="https://sinfulzen.github.io/IMP/assets/images/icons/construction-github.png" alt="GitHub" width="20" height="20">
-            GitHub
-        </a>
+    <div class="central-body">
+        <h3>YouTube Tools</h3>
+        <div class="input-container">
+            <input type="text" id="channelUrl" placeholder="Enter YouTube Channel URL">
+            <button onclick="getLiveSubscriberCount()">Live Subscriber Count</button>
+            <div class="result" id="liveCountResult"></div>
+        </div>
+        <div class="input-container">
+            <input type="text" id="channelId" placeholder="Enter YouTube Channel ID">
+            <button onclick="getChannelStats()">Channel Stats</button>
+            <div class="result" id="channelStatsResult"></div>
+        </div>
     </div>
+    <script>
+        const apiKey = '#';
+
+        function getChannelIdFromUrl(url) {
+            const urlObj = new URL(url);
+            const path = urlObj.pathname.split('/');
+            if (path[1] === 'channel') {
+                return path[2];
+            } else if (path[1] === 'user') {
+
+                return null;
+            } else {
+                return null;
+            }
+        }
+
+        function getLiveSubscriberCount() {
+            const url = document.getElementById('channelUrl').value;
+            const channelId = getChannelIdFromUrl(url);
+
+            if (channelId) {
+                fetch(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${channelId}&key=${apiKey}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        const subscriberCount = data.items[0].statistics.subscriberCount;
+                        document.getElementById('liveCountResult').innerHTML = `<p>Live Subscriber Count: ${subscriberCount}</p>`;
+                    })
+                    .catch(error => {
+                        console.error('Error fetching subscriber count:', error);
+                        document.getElementById('liveCountResult').innerHTML = `<p>Error fetching subscriber count</p>`;
+                    });
+            } else {
+                document.getElementById('liveCountResult').innerHTML = `<p>Invalid Channel URL</p>`;
+            }
+        }
+
+        function getChannelStats() {
+            const channelId = document.getElementById('channelId').value;
+
+            if (channelId) {
+                fetch(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${channelId}&key=${apiKey}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        const stats = data.items[0].statistics;
+                        document.getElementById('channelStatsResult').innerHTML = `
+                            <p>Total Subscribers: ${stats.subscriberCount}</p>
+                            <p>Total Views: ${stats.viewCount}</p>
+                            <p>Total Videos: ${stats.videoCount}</p>
+                            <p>Total Likes: Not available via this API</p>
+                        `;
+                    })
+                    .catch(error => {
+                        console.error('Error fetching channel stats:', error);
+                        document.getElementById('channelStatsResult').innerHTML = `<p>Error fetching channel stats</p>`;
+                    });
+            } else {
+                document.getElementById('channelStatsResult').innerHTML = `<p>Invalid Channel ID</p>`;
+            }
+        }
+    </script>
 </body>
 </html>
