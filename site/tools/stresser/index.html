@@ -19,7 +19,7 @@
     <meta property="og:description" content="An intensive collection of PlayStation™3 content. We also have various unique tools for media enhancement and social platforms!">
     <meta property="og:image" content="https://sinfulzen.github.io/IMP/assets/images/branding/banner.png">
 
-    <title>IMP • Under Construction</title>
+    <title>IMP • Stresser</title>
 </head>
 </html>
 
@@ -29,74 +29,164 @@
 
     <style>
         body {
-            background-color: #141414;
             display: flex;
-            justify-content: center;
-            align-items: center;
             height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
+            background-color: #141414;
             color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
-        .centered-body {
-            background-color: #1f1f1f;
-            border: 2px solid #ff0000;
-            border-radius: 15px;
+        .sidebar {
+            width: 180px;
+            background-color: #1e1e1e;
+            border: 2px solid red;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            margin: 20px;
+            gap: 10px;
+        }
+        .sidebar .option {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: border 0.3s;
+        }
+        .sidebar .option:hover {
+            border: 1px solid red;
+        }
+        .sidebar .option img {
+            margin-right: 10px;
+        }
+        .main-content {
+            flex: 1;
+            background-color: #1e1e1e;
+            border: 2px solid red;
+            border-radius: 20px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+        }
+        .main-content input, .main-content select, .main-content button {
+            width: 100%;
+            max-width: 300px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            border: 1px solid red;
+            background-color: #2a2a2a;
+            color: #fff;
+            text-align: center;
+        }
+        .main-content select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-color: #141414;
+        }
+        .main-content select option {
+            background-color: #141414;
+        }
+        .main-content select:hover option {
+            color: red;
+        }
+        .main-content button {
+            background-color: red;
+            cursor: pointer;
+        }
+        .main-content button:hover {
+            background-color: #ff3333;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            bottom: 35px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #141414;
+            border: 2px solid red;
+            border-radius: 20px;
             padding: 20px;
             text-align: center;
-            width: 300px;
-        }
-        .logo {
-            width: 45px;
-            height: auto;
-            position: relative;
-            top: -42px;
-            right: 0px;
-            bottom: 0px;
-            left: 0px;
-            margin-bottom: 20px;
-}
-        }
-        .header {
-            font-size: 24px;
-            margin: 0;
-        }
-        .subheader {
-            font-size: 14px;
-            margin: 5px 0 20px 0;
-        }
-        .button {
-            background-color: #ff0000;
-            border: none;
-            border-radius: 15px;
-            color: #ffffff;
-            padding: 10px 20px;
-            margin: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-        }
-        .button img {
-            margin-right: 8px;
         }
     </style>
 </head>
 <body>
-    <div class="centered-body">
-        <img src="https://sinfulzen.github.io/IMP/assets/images/icons/construction.webp" alt="Logo" class="logo">
-        <h3 class="header">Under Construction</h3>
-        <p class="subheader">This section of the site is unfinished, please come back soon!</p>
-        <a href="https://discord.gg/vbGdtfNQXT" class="button">
-            <img src="https://sinfulzen.github.io/IMP/assets/images/icons/construction-discord.png" alt="Discord" width="20" height="20">
-            Discord
-        </a>
-        <a href="https://github.com/sinfulzen/IMP" class="button">
-            <img src="https://sinfulzen.github.io/IMP/assets/images/icons/construction-github.png" alt="GitHub" width="20" height="20">
-            GitHub
-        </a>
+    <div class="sidebar">
+        <div class="option" onclick="window.location.href='#'">
+            <img src="#" alt="#" width="24">
+            <span>Home</span>
+        </div>
+        <div class="option" onclick="window.location.href='#'">
+            <img src="#" alt="#" width="24">
+            <span>Attack Hub</span>
+        </div>
+        <div class="option" onclick="window.location.href='#'">
+            <img src="#" alt="#" width="24">
+            <span>Info</span>
+        </div>
+        <div class="option" onclick="window.location.href='#'">
+            <img src="#" alt="#" width="24">
+            <span>Premium</span>
+        </div>
     </div>
+    <div class="main-content">
+        <input type="text" id="ipHostname" placeholder="IP / HostName">
+        <input type="text" id="port" placeholder="Port">
+        <br>
+        <select id="layer">
+            <option value="" disabled selected>Layer</option>
+            <option value="layer4">Layer 4</option>
+            <option value="layer7">Layer 7</option>
+        </select>
+        <select id="method">
+            <option value="" disabled selected>Method</option>
+            <option value="method1">TCP</option>
+            <option value="method2">UDP</option>
+            <option value="method3">SYN</option>
+            <option value="method4">NTP</option>
+            <option value="method5">DNS</option>
+            <option value="method6">SSDP</option>
+        </select>
+        <br>
+        <input type="text" id="time" placeholder="Time">
+        <select id="spoofing">
+            <option value="" disabled selected>Spoofing</option>
+            <option value="enabled">Enabled</option>
+            <option value="disabled">Disabled</option>
+        </select>
+        <br>
+         <br>
+          <br>
+        <button onclick="submitForm()">Attack</button>
+    </div>
+    <div class="popup" id="popup">
+        <p>Attack started!</p>
+    </div>
+    <script>
+        function submitForm() {
+            const ipHostname = document.getElementById('ipHostname').value;
+            const port = document.getElementById('port').value;
+            const layer = document.getElementById('layer').value;
+            const method = document.getElementById('method').value;
+            const time = document.getElementById('time').value;
+            const spoofing = document.getElementById('spoofing').value;
+
+            if (ipHostname && port && layer && method && time && spoofing) {
+                const popup = document.getElementById('popup');
+                popup.style.display = 'block';
+                setTimeout(() => {
+                    popup.style.display = 'none';
+                }, 5000);
+            }
+        }
+    </script>
 </body>
 </html>
