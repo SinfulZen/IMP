@@ -19,7 +19,7 @@
     <meta property="og:description" content="An intensive collection of PlayStation™3 content. We also have various unique tools for media enhancement and social platforms!">
     <meta property="og:image" content="https://sinfulzen.github.io/IMP/assets/images/branding/banner.png">
 
-    <title>IMP • Under Construction</title>
+    <title>IMP • Settings</title>
 </head>
 </html>
 
@@ -29,74 +29,181 @@
 
     <style>
         body {
-            background-color: #141414;
             display: flex;
-            justify-content: center;
-            align-items: center;
             height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
+            background-color: #141414;
             color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            justify-content: center;
         }
-        .centered-body {
-            background-color: #1f1f1f;
-            border: 2px solid #ff0000;
-            border-radius: 15px;
+        .sidebar {
+            width: 180px;
+            height: 590px;
+            background-color: #1e1e1e;
+            border: 2px solid red;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            margin-right: 20px;
+        }
+        .sidebar .option {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .sidebar .option:hover {
+            border: 1px solid red;
+        }
+        .sidebar .option img {
+            margin-right: 10px;
+        }
+        .main-content {
+            flex: 1;
+            background-color: #1e1e1e;
+            border: 2px solid red;
+            border-radius: 20px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+        .section {
+            background-color: #2a2a2a;
+            border: 1px solid red;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 20px;
+            position: relative;
+        }
+        .section h2 {
+            margin: 0;
+            margin-bottom: 10px;
+        }
+        .section p {
+            margin: 0;
+        }
+        .toggle {
+            position: absolute;
+            width: 52px;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #141414;
+            border: 2px solid red;
+            border-radius: 10px;
             padding: 20px;
             text-align: center;
-            width: 300px;
         }
-        .logo {
-            width: 45px;
-            height: auto;
-            position: relative;
-            top: -42px;
-            right: 0px;
-            bottom: 0px;
-            left: 0px;
-            margin-bottom: 20px;
-}
-        }
-        .header {
-            font-size: 24px;
-            margin: 0;
-        }
-        .subheader {
-            font-size: 14px;
-            margin: 5px 0 20px 0;
-        }
-        .button {
-            background-color: #ff0000;
-            border: none;
-            border-radius: 15px;
-            color: #ffffff;
+        .popup button {
+            background-color: red;
+            color: #fff;
             padding: 10px 20px;
-            margin: 5px;
-            font-size: 16px;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-        }
-        .button img {
-            margin-right: 8px;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="centered-body">
-        <img src="https://sinfulzen.github.io/IMP/assets/images/icons/construction.webp" alt="Logo" class="logo">
-        <h3 class="header">Under Construction</h3>
-        <p class="subheader">This section of the site is unfinished, please come back soon!</p>
-        <a href="https://discord.gg/vbGdtfNQXT" class="button">
-            <img src="https://sinfulzen.github.io/IMP/assets/images/icons/construction-discord.png" alt="Discord" width="20" height="20">
-            Discord
-        </a>
-        <a href="https://github.com/sinfulzen/IMP" class="button">
-            <img src="https://sinfulzen.github.io/IMP/assets/images/icons/construction-github.png" alt="GitHub" width="20" height="20">
-            GitHub
-        </a>
+    <div class="sidebar">
+        <div class="option">
+            <img src="assets/general.png" alt="#" width="24">
+            <span>General</span>
+        </div>
+        <div class="option">
+            <img src="assets/audio.png" alt="#" width="24">
+            <span>Audio</span>
+        </div>
+        <div class="option">
+            <img src="assets/video.png" alt="#" width="24">
+            <span>Video</span>
+        </div>
+        <div class="option">
+            <img src="assets/content.png" alt="#" width="24">
+            <span>Content</span>
+        </div>
+        <div class="option">
+            <img src="assets/misc.png" alt="#" width="24">
+            <span>Misc</span>
+        </div>
+        <div class="option">
+            <img src="assets/debugging.png" alt="#" width="24">
+            <span>Debugging</span>
+        </div>
+        <div class="option">
+            <img src="assets/advanced.png" alt="#" width="24">
+            <span>Advanced</span>
+        </div>
     </div>
+    <div class="main-content">
+        <div class="section">
+            <h2>Notifications</h2>
+            <p>Whenever there's a change or update on the site, You'll be notified via email, SMS, etc.</p>
+            <img src="assets/disabled.png" alt="Toggle Off" class="toggle" data-enabled="false" data-toggle-on="assets/enabled.png" data-toggle-off="assets/disabled.png">
+        </div>
+        <div class="section">
+            <h2>Background Music</h2>
+            <p>Plays music in the site background. Music can be set via file explorer or URL.</p>
+            <img src="assets/disabled.png" alt="Toggle Off" class="toggle" data-enabled="false" data-toggle-on="assets/enabled.png" data-toggle-off="assets/disabled.png">
+        </div>
+        <div class="section">
+            <h2>NSFW Protection</h2>
+            <p>Any NSFW content on the site will be blocked for You. This is great for keeping Your Children safe.</p>
+            <img src="assets/disabled.png" alt="Toggle Off" class="toggle" data-enabled="false" data-toggle-on="assets/enabled.png" data-toggle-off="assets/disabled.png">
+        </div>
+        <div class="section">
+            <h2>Analytical Data</h2>
+            <p>Allows Us to collect certain information which We may share with 3rd Parties to enhance Our site and services.</p>
+            <img src="assets/disabled.png" alt="Toggle Off" class="toggle" data-enabled="false" data-toggle-on="assets/enabled.png" data-toggle-off="assets/disabled.png">
+        </div>
+        <div class="section">
+            <h2>Zenify</h2>
+            <p>Zenify is an AI model that is great for detecting harmful software. This will help keep You safe from ratted or infected content.</p>
+            <img src="assets/disabled.png" alt="Toggle Off" class="toggle" data-enabled="false" data-toggle-on="assets/enabled.png" data-toggle-off="assets/disabled.png">
+        </div>
+    </div>
+    <div class="popup" id="popup">
+        <p>Please save Your settings!</p>
+        <button onclick="closePopup()">Save</button>
+    </div>
+    <script>
+        document.querySelectorAll('.toggle').forEach(toggle => {
+            toggle.addEventListener('click', function() {
+                const isEnabled = this.getAttribute('data-enabled') === 'true';
+                this.setAttribute('data-enabled', !isEnabled);
+                this.src = isEnabled ? this.getAttribute('data-toggle-off') : this.getAttribute('data-toggle-on');
+                showPopup();
+            });
+        });
+
+        function showPopup() {
+            const popup = document.getElementById('popup');
+            popup.style.display = 'block';
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 3000);
+        }
+
+        function closePopup() {
+            const popup = document.getElementById('popup');
+            popup.style.display = 'none';
+        }
+    </script>
 </body>
 </html>
