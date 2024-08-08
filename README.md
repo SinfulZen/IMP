@@ -75,6 +75,9 @@ Various tools for Instagram, Discord & more.
 ### Notes
 - Please note that as there's only one Developer working on the project (currently), production will be slow. The project is a work in progress though and will go through several updates daily!
 - To view the website properly on mobile, enable Desktop mode. This is just until We implement features to ensure the site displays correctly across all platforms and devices.
+- If the "Guest" button doesn't work on the login page, You can use these credentials:
+  - Username: ImmortalModding
+  - Password: Paradise
 
 ### Credits
 All credits goes to the following People or groups for contributing to the project:
