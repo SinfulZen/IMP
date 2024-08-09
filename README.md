@@ -125,3 +125,8 @@ All credits goes to the following People or groups for contributing to the proje
 
 ### Disclaimer
 This repo may feature several licenses to ensure that all aspects of protection are covered. To avoid any legal issues or implications, if You're not happy with Your content being on Our site, please get in contact and inform Us. We can discuss what to do next and come to a conclusion peacefully.
+
+### Contact Us
+If You'd like to get in contact to give Us feedback or make a complaint, You can use the info below:
+WhatsApp: [Matt (Zen)](https://wa.me/07935625887)
+Discord: [Sinful Zen](https://discord.com/users/1118879403754131550)
