@@ -7,280 +7,288 @@
     <style>
         body {
             margin: 0;
-            padding: 0;
-            background: #141414;
             font-family: Arial, sans-serif;
-            color: white;
-            overflow-x: hidden;
-        }
-
-        .media-player {
-            position: relative;
-            width: 70%;
-            max-width: 800px;
-            height: 450px;
-            background: #000;
-            border-radius: 15px;
-            margin: 50px auto;
+            background-color: #000000;
+            display: flex;
+            height: 100vh;
             overflow: hidden;
         }
 
-        .media-player iframe {
+        .container {
+            display: flex;
             width: 100%;
             height: 100%;
-            border: none;
-            border-radius: 15px;
         }
 
-        .media-controls, .options-menu {
-            display: none;
-            position: absolute;
-            bottom: 10px;
-            left: 10px;
-            right: 10px;
-            text-align: center;
-        }
-
-        .media-controls img, .options-menu img {
-            cursor: pointer;
-            margin: 0 10px;
-        }
-
-        .media-controls img.play-icon {
-            width: 25px;
-            height: 25px;
-        }
-
-        .media-controls img.pause-icon {
-            width: 25px;
-            height: 25px;
-        }
-
-        .media-controls img.seek-forward-icon {
-            width: 25px;
-            height: 25px;
-        }
-
-        .media-controls img.seek-backward-icon {
-            width: 25px;
-            height: 25px;
-        }
-
-        .media-controls img.settings-icon {
-            width: 25px;
-            height: 25px;
-        }
-
-        .media-player:hover .media-controls,
-        .media-player:focus .media-controls,
-        .media-player:hover .title,
-        .media-player:focus .title {
-            display: block;
-        }
-
-        .title {
-            display: none;
-            position: absolute;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 18px;
-        }
-
-        .options-menu {
-            display: none;
-            position: absolute;
-            bottom: 40px;
-            right: 10px;
-            background: #141414;
-            border: 1px solid;
-            border-radius: 10px;
-            padding: 10px;
-            z-index: 10;
-        }
-
-        .options-menu a {
-            display: block;
-            padding: 5px;
+        .video-player {
+            flex: 1;
+            padding: 20px;
+            background-color: #333;
             color: white;
-            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
-        .options-menu a:hover {
-            background: linear-gradient(to right, black, red);
-            border-radius: 5px;
+        video {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        .controls {
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .description {
+            margin-top: 15px;
+            text-align: center;
         }
 
         .movie-list {
-            width: 70%;
-            max-width: 800px;
-            margin: 20px auto;
+            width: 250px;
+            background-color: #222;
+            color: white;
+            overflow-y: scroll;
+            padding: 20px;
+        }
+
+        .movie {
             display: flex;
             flex-direction: column;
-            overflow-y: scroll;
-            max-height: 400px;
-        }
-
-        .movie-item {
             margin-bottom: 20px;
-        }
-
-        .movie-item img {
-            border-radius: 10px;
-        }
-
-        .movie-item .info {
-            text-align: center;
-            margin-top: 10px;
-        }
-
-        .scrollbar::-webkit-scrollbar {
-            width: 12px;
-        }
-
-        .scrollbar::-webkit-scrollbar-thumb {
-            background: linear-gradient(to bottom, black, red);
-            border-radius: 6px;
-        }
-
-        .nav-bar {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #141414;
-            border: 1px solid;
-            border-radius: 25px;
-            padding: 10px;
-            display: flex;
-            justify-content: space-around;
-            width: 200px;
-        }
-
-        .nav-bar img {
             cursor: pointer;
         }
 
-        .nav-bar img.account-icon {
-            width: 25px;
-            height: 25px;
-        }
-
-        .nav-bar img.menu-icon {
-            width: 25px;
-            height: 25px;
-        }
-
-        .nav-bar img.info-icon {
-            width: 25px;
-            height: 25px;
-        }
-
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            bottom: 60px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #141414;
-            border: 1px solid;
-            border-radius: 10px;
-            padding: 10px;
-            z-index: 10;
-        }
-
-        .dropdown-menu a {
-            display: block;
-            padding: 5px;
-            color: white;
-            text-decoration: none;
-        }
-
-        .dropdown-menu a:hover {
-            background: linear-gradient(to right, black, red);
+        .movie img {
+            width: 100%;
             border-radius: 5px;
+        }
+
+        .movie-title {
+            margin-top: 5px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .movie-info {
+            font-size: 12px;
+            color: #aaa;
+        }
+
+        .movie-list::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .movie-list::-webkit-scrollbar-thumb {
+            background-color: #444;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #555;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #777;
+        }
+
+        select {
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            border: none;
+            color: #333;
+            outline: none;
+            cursor: pointer;
+        }
+
+        select:hover {
+            background-color: #e0e0e0;
+        }
+
+        select option {
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        select option:hover {
+            background-color: #d0d0d0;
         }
     </style>
 </head>
 <body>
-    <div class="media-player">
-        <iframe id="movie-frame" src="https://drive.google.com/file/d/130a41jk35NGwbbOC3u3IZOoVnxvO_LwW/preview"></iframe>
-        <div class="title">Venom: Let There Be Carnage</div>
-        <div class="media-controls">
-            <img src="assets/play.png" alt="Play" class="play-icon" onclick="playPause()">
-            <img src="assets/pause.png" alt="Pause" class="pause-icon" onclick="playPause()">
-            <img src="assets/ahead-10sec.png" alt="Forward" class="seek-forward-icon" onclick="seek(10)">
-            <img src="assets/back-10sec.png" alt="Backward" class="seek-backward-icon" onclick="seek(-10)">
-            <img src="assets/settings.png" alt="Options" class="settings-icon" onclick="toggleOptionsMenu()">
+
+<div class="container">
+    <div class="video-player">
+        <video id="movie-player" controls>
+            <source id="video-source" src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <div class="controls">
+            <button onclick="playPause()">Play/Pause</button>
+            <button onclick="rewind10()">Rewind 10S</button>
+            <button onclick="prevMovie()">Previous Movie</button>
+            <button onclick="nextMovie()">Next Movie</button>
+            <button onclick="toggleFullscreen()">Fullscreen</button>
+            <select id="quality-select" onchange="changeQuality()">
+                <option value="720P">720P</option>
+                <option value="1080P">1080P</option>
+                <option value="1440P">1440P</option>
+                <option value="2160P">2160P</option>
+            </select>
+            <button onclick="downloadMovie()">Download</button>
         </div>
-        <div class="options-menu" id="options-menu">
-            <a href="#">Quality: 720P</a>
-            <a href="#">Quality: 1080P</a>
-            <a href="#">Quality: 1440P</a>
-            <a href="#">Quality: 2160P</a>
-            <a href="#">Download</a>
+
+        <div class="description">
+            <p id="movie-description">Select a movie to see the description here.</p>
         </div>
     </div>
-    <div class="movie-list scrollbar">
-        <div class="movie-item" onclick="playMovie('https://drive.google.com/file/d/12Q_3nq5ZaLYp0gkf39aBMkMTS-mJQKdU/preview')">
-            <img src="thumbnail1.jpg" alt="#" style="width: 200px; height: 300px;">
-            <div class="info">
-                <div>Iron man 3</div>
-                <div>Quality: Multi | Size: 1GB</div>
-            </div>
-        </div>
-        <div class="movie-item" onclick="playMovie('#')">
-            <img src="thumbnail2.jpg" alt="#" style="width: 250px; height: 350px;">
-            <div class="info">
-                <div>{Movie Title}</div>
-                <div>Quality: Unknown | Size: Unknown</div>
-            </div>
-        </div>
-        <!-- Movie list goes here -->
+    <div class="movie-list" id="movie-list">
+        <!-- MOVIE ENTRIES GO HERE -->
     </div>
-    <div class="nav-bar">
-        <img src="assets/account.png" alt="External 1" class="account-icon" onclick="window.location.href='#'">
-        <img src="assets/menu.png" alt="Menu" class="menu-icon" onclick="toggleDropdownMenu()">
-        <img src="assets/info.png" alt="External 2" class="info-icon" onclick="window.location.href='#'">
-    </div>
-    <div class="dropdown-menu" id="dropdown-menu">
-        <a href="#">Movie List</a>
-        <a href="#">Contribute</a>
-        <a href="#">Suggestions</a>
-    </div>
+</div>
 
-    <script>
-        function playMovie(fileId) {
-            const movieFrame = document.getElementById('movie-frame');
-            movieFrame.src = `https://drive.google.com/file/d/${fileId}/preview`;
-            document.querySelector('.title').innerText = `Movie Title ${fileId}`;
+<script>
+    const movies = [
+        {
+            title: "Iron Man 2",
+            description: "The second sequal to the first movie.",
+            thumbnail: "assets/",
+            sources: {
+                "Default": "https://drive.google.com/uc?export=download&id=FILE_ID_1_720P",
+                "1080P": "https://drive.google.com/uc?export=download&id=FILE_ID_1_1080P",
+                "1440P": "https://drive.google.com/uc?export=download&id=FILE_ID_1_1440P",
+                "2160P": "https://drive.google.com/uc?export=download&id=FILE_ID_1_2160P"
+            },
+            size: "0 GB"
+        },
+        {
+            title: "Iron Man 3",
+            description: "The third sequal to the second movie.",
+            thumbnail: "assets/",
+            sources: {
+                "720P": "https://drive.google.com/uc?export=download&id=FILE_ID_2_720P",
+                "1080P": "https://drive.google.com/uc?export=download&id=FILE_ID_2_1080P",
+                "1440P": "https://drive.google.com/uc?export=download&id=FILE_ID_2_1440P",
+                "2160P": "https://drive.google.com/uc?export=download&id=FILE_ID_2_2160P"
+            },
+            size: "0 GB"
         }
+        // MOVIE OBJECTS GO HERE
+    ];
 
-        function playPause() {
-            const iframe = document.getElementById('movie-frame');
-            const player = iframe.contentWindow.document.querySelector('video');
-            if (player.paused) {
-                player.play();
-            } else {
-                player.pause();
-            }
-        }
+    let currentMovieIndex = 0;
 
-        function seek(seconds) {
-            const iframe = document.getElementById('movie-frame');
-            const player = iframe.contentWindow.document.querySelector('video');
-            player.currentTime += seconds;
-        }
+    function loadMovie(index) {
+        currentMovieIndex = index;
+        const movie = movies[index];
+        const videoSource = document.getElementById('video-source');
+        const quality = document.getElementById('quality-select').value;
+        const movieDescription = document.getElementById('movie-description');
 
-        function toggleOptionsMenu() {
-            const optionsMenu = document.getElementById('options-menu');
-            optionsMenu.style.display = optionsMenu.style.display === 'block' ? 'none' : 'block';
-        }
+        videoSource.src = movie.sources[quality];
+        videoSource.parentNode.load();
+        movieDescription.textContent = movie.title + " - " + movie.description;
+        videoSource.parentNode.play();
+    }
 
-        function toggleDropdownMenu() {
-            const dropdownMenu = document.getElementById('dropdown-menu');
-            dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+    function playPause() {
+        const videoPlayer = document.getElementById('movie-player');
+        if (videoPlayer.paused) {
+            videoPlayer.play();
+        } else {
+            videoPlayer.pause();
         }
-    </script>
+    }
+
+    function rewind10() {
+        const videoPlayer = document.getElementById('movie-player');
+        videoPlayer.currentTime -= 10;
+    }
+
+    function nextMovie() {
+        if (currentMovieIndex < movies.length - 1) {
+            loadMovie(currentMovieIndex + 1);
+        }
+    }
+
+    function prevMovie() {
+        if (currentMovieIndex > 0) {
+            loadMovie(currentMovieIndex - 1);
+        }
+    }
+
+    function toggleFullscreen() {
+        const videoPlayer = document.getElementById('movie-player');
+        if (videoPlayer.requestFullscreen) {
+            videoPlayer.requestFullscreen();
+        } else if (videoPlayer.mozRequestFullScreen) {
+            videoPlayer.mozRequestFullScreen();
+        } else if (videoPlayer.webkitRequestFullscreen) {
+            videoPlayer.webkitRequestFullscreen();
+        } else if (videoPlayer.msRequestFullscreen) {
+            videoPlayer.msRequestFullscreen();
+        }
+    }
+
+    function changeQuality() {
+        loadMovie(currentMovieIndex);
+    }
+
+    function downloadMovie() {
+        const movie = movies[currentMovieIndex];
+        const quality = document.getElementById('quality-select').value;
+        const downloadLink = document.createElement('a');
+        downloadLink.href = movie.sources[quality];
+        downloadLink.download = movie.title + "-" + quality + ".mp4";
+        downloadLink.click();
+    }
+
+    function generateMovieList() {
+        const movieList = document.getElementById('movie-list');
+        movieList.innerHTML = '';
+
+        movies.forEach((movie, index) => {
+            const movieElement = document.createElement('div');
+            movieElement.className = 'movie';
+            movieElement.onclick = () => loadMovie(index);
+
+            const thumbnail = document.createElement('img');
+            thumbnail.src = movie.thumbnail;
+            thumbnail.alt = movie.title;
+
+            const title = document.createElement('div');
+            title.className = 'movie-title';
+            title.textContent = movie.title;
+
+            const info = document.createElement('div');
+            info.className = 'movie-info';
+            info.textContent = `Size: ${movie.size} | Quality: 1080P`;
+
+            movieElement.appendChild(thumbnail);
+            movieElement.appendChild(title);
+            movieElement.appendChild(info);
+
+            movieList.appendChild(movieElement);
+        });
+    }
+
+    generateMovieList();
+    loadMovie(0);
+</script>
+
 </body>
 </html>
