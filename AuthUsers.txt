@@ -1,0 +1,11 @@
+[GROUP] Zen Developments
+ [SITE CREATOR] Zen Developer
+ [SITE ADMIN] Flaming Immortal
+ [SITE ADMIN] Ghosty
+ [SITE MANAGER] Zen AI
+[AUTOMATIC]
+ [WEB SCRAPER] IPV4 & IPV6 address collection (IPV4 & IPV6 protocols)
+ [WEB SCRAPER] WebKit & UserAgent info collection (WebKit & UserAgent for DB ID)
+ [WEB SCRAPER] Device info collection (Partial device specifications which the browser in use can collect)
+[USER]
+ [VISITOR] Website Visitor
